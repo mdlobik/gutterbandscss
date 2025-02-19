@@ -14,6 +14,20 @@
   height: auto !important;
   max-width: 100%;
   object-fit: cover;
+  display: block; /* Prevent inline spacing issues */
+}
+
+/* Fix parent container overflow issues */
+.LjV9wd, .Ikn7zx, .HlRz5e, .BJSaf1 {
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Ensure wow-image container doesn't overflow */
+wow-image {
+  display: block !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
 }
 
 /* Make the column layout responsive */
@@ -67,12 +81,30 @@
   aspect-ratio: 627/479;
 }
 
-/* Ensure parent containers don't restrict size */
+/* Ensure parent containers don't restrict size and prevent overflow */
 .comp-m764m6viinlineContent-gridContainer,
 .comp-m764mf0hinlineContent-gridContainer,
 .comp-m764mf28inlineContent-gridContainer,
+.comp-m764mpa8inlineContent-gridContainer,
+.comp-m764m6viinlineContent,
+.comp-m764mf0hinlineContent,
+.comp-m764mf28inlineContent,
+.comp-m764mpa8inlineContent,
+.Containeru1kbj,
+.Containeru1kbjinlineContent,
+.Containeru1kbjinlineContent-gridContainer {
+  max-width: 100% !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+/* Add specific fix for content containment */
+.comp-m764mf28inlineContent-gridContainer,
 .comp-m764mpa8inlineContent-gridContainer {
-  max-width: 100%;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
 /* Make headers responsive too */
