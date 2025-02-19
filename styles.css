@@ -1,3 +1,82 @@
-#test {
+/* Responsive images CSS */
+
+/* Target the image containers */
+.LjV9wd.comp-m764snp8,
+.LjV9wd.comp-m7bnjhts {
+  width: 100%;
+  max-width: 100%;
 }
 
+/* Make the images responsive */
+#img_comp-m764snp8 img,
+#img_comp-m7bnjhts img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Make the column layout responsive */
+@media screen and (max-width: 767px) {
+  /* Stack columns on mobile */
+  .V5AUxf {
+    flex-direction: column !important;
+  }
+  
+  /* Full width columns on mobile */
+  .comp-m764mf28,
+  .comp-m764mpa8 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Add some spacing between stacked columns */
+  .comp-m764mf28 {
+    margin-bottom: 30px;
+  }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Make columns more proportional on tablets */
+  .comp-m764mf28,
+  .comp-m764mpa8 {
+    width: 48% !important;
+  }
+  
+  /* Add some spacing between columns */
+  .V5AUxf {
+    justify-content: space-between !important;
+  }
+}
+
+/* Fix image container sizes */
+.Ikn7zx {
+  width: 100%;
+  height: auto;
+}
+
+/* Make WOW image component responsive */
+.HlRz5e.BJSaf1 {
+  width: 100%;
+  height: auto;
+}
+
+/* Maintain aspect ratio */
+.HlRz5e.BJSaf1 img {
+  aspect-ratio: 627/479;
+}
+
+/* Ensure parent containers don't restrict size */
+.comp-m764m6viinlineContent-gridContainer,
+.comp-m764mf0hinlineContent-gridContainer,
+.comp-m764mf28inlineContent-gridContainer,
+.comp-m764mpa8inlineContent-gridContainer {
+  max-width: 100%;
+}
+
+/* Make headers responsive too */
+.comp-m764q8fa .font_2,
+.comp-m764otf1 .font_2 {
+  font-size: clamp(24px, 5vw, 34px) !important;
+}
