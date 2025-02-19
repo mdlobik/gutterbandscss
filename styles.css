@@ -1,14 +1,14 @@
-/* Target only the two specific image containers */
-.MazNVa.comp-m764snp8,
-.MazNVa.comp-m7bnjhts {
+/* Only target columns within Containeru1kbj */
+.Containeru1kbj .MazNVa.comp-m764snp8,
+.Containeru1kbj .MazNVa.comp-m7bnjhts {
   width: 100% !important;
   max-width: 100% !important;
   overflow: hidden !important;
 }
 
-/* Make only these two images responsive */
-#img_comp-m764snp8 img,
-#img_comp-m7bnjhts img {
+/* Make only these two images responsive within Containeru1kbj */
+.Containeru1kbj #img_comp-m764snp8 img,
+.Containeru1kbj #img_comp-m7bnjhts img {
   width: 100% !important;
   height: auto !important;
   max-width: 100% !important;
@@ -16,38 +16,38 @@
   display: block !important;
 }
 
-/* Fix the immediate parent elements of these images */
-.j7pOnl,
-.HlRz5e.BI8PVQ {
+/* Fix the immediate parent elements of these images within Containeru1kbj */
+.Containeru1kbj .j7pOnl,
+.Containeru1kbj .HlRz5e.BI8PVQ {
   width: 100% !important;
   max-width: 100% !important;
   overflow: hidden !important;
 }
 
-/* Center the columns that contain images */
-.V5AUxf {
+/* Center the columns that contain images within Containeru1kbj */
+.Containeru1kbj .V5AUxf {
   display: flex !important;
   justify-content: center !important;
   gap: 20px !important;
   padding: 0 20px !important;
 }
 
-/* Make sure columns don't overlap */
-.comp-m764mf28,
-.comp-m764mpa8 {
+/* Make sure columns don't overlap within Containeru1kbj */
+.Containeru1kbj .comp-m764mf28,
+.Containeru1kbj .comp-m764mpa8 {
   box-sizing: border-box !important;
   padding: 0 10px !important;
 }
 
-/* Responsive behavior only for these columns */
+/* Responsive behavior only for these columns within Containeru1kbj */
 @media screen and (max-width: 767px) {
-  .V5AUxf {
+  .Containeru1kbj .V5AUxf {
     flex-direction: column !important;
     align-items: center !important;
   }
   
-  .comp-m764mf28,
-  .comp-m764mpa8 {
+  .Containeru1kbj .comp-m764mf28,
+  .Containeru1kbj .comp-m764mpa8 {
     width: 100% !important;
     max-width: 500px !important; /* Limit width on mobile */
     margin-bottom: 30px !important;
