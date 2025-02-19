@@ -39,3 +39,17 @@
   padding: 0 10px !important;
 }
 
+/* Responsive behavior only for these columns within Containeru1kbj */
+@media screen and (max-width: 767px) {
+  .Containeru1kbj .V5AUxf {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .Containeru1kbj .comp-m764mf28,
+  .Containeru1kbj .comp-m764mpa8 {
+    width: 100% !important;
+    max-width: 500px !important; /* Limit width on mobile */
+    margin-bottom: 30px !important;
+  }
+}
