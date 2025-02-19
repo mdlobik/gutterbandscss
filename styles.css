@@ -1,5 +1,5 @@
 /* Limit the main container width */
-.Containeru1kbj {
+#PAGES_CONTAINER {
   max-width: 1200px !important;
   margin: 0 auto !important;
   padding: 0 20px !important;
