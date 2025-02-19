@@ -1,10 +1,27 @@
-/* Responsive images CSS */
+/* Limit the main container width */
+.Containeru1kbj {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
 
-/* Target the image containers */
-.LjV9wd.comp-m764snp8,
-.LjV9wd.comp-m7bnjhts {
-  width: 100%;
-  max-width: 100%;
+/* Center the columns container */
+.V5AUxf {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 30px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Column styles */
+.comp-m764mf28,
+.comp-m764mpa8 {
+  flex: 1 !important;
+  max-width: 48% !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /* Make the images responsive */
@@ -12,15 +29,17 @@
 #img_comp-m7bnjhts img {
   width: 100% !important;
   height: auto !important;
-  max-width: 100%;
-  object-fit: cover;
-  display: block; /* Prevent inline spacing issues */
+  max-width: 100% !important;
+  object-fit: cover !important;
+  display: block !important; /* Prevent inline spacing issues */
 }
 
-/* Fix parent container overflow issues */
-.LjV9wd, .Ikn7zx, .HlRz5e, .BJSaf1 {
+/* Fix image containers */
+.MazNVa, .j7pOnl, .HlRz5e, .BI8PVQ {
   max-width: 100% !important;
+  width: 100% !important;
   overflow: hidden !important;
+  display: block !important;
 }
 
 /* Ensure wow-image container doesn't overflow */
@@ -28,57 +47,6 @@ wow-image {
   display: block !important;
   max-width: 100% !important;
   overflow: hidden !important;
-}
-
-/* Make the column layout responsive */
-@media screen and (max-width: 767px) {
-  /* Stack columns on mobile */
-  .V5AUxf {
-    flex-direction: column !important;
-  }
-  
-  /* Full width columns on mobile */
-  .comp-m764mf28,
-  .comp-m764mpa8 {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  
-  /* Add some spacing between stacked columns */
-  .comp-m764mf28 {
-    margin-bottom: 30px;
-  }
-}
-
-/* Tablet adjustments */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Make columns more proportional on tablets */
-  .comp-m764mf28,
-  .comp-m764mpa8 {
-    width: 48% !important;
-  }
-  
-  /* Add some spacing between columns */
-  .V5AUxf {
-    justify-content: space-between !important;
-  }
-}
-
-/* Fix image container sizes */
-.Ikn7zx {
-  width: 100%;
-  height: auto;
-}
-
-/* Make WOW image component responsive */
-.HlRz5e.BJSaf1 {
-  width: 100%;
-  height: auto;
-}
-
-/* Maintain aspect ratio */
-.HlRz5e.BJSaf1 img {
-  aspect-ratio: 627/479;
 }
 
 /* Ensure parent containers don't restrict size and prevent overflow */
@@ -90,7 +58,6 @@ wow-image {
 .comp-m764mf0hinlineContent,
 .comp-m764mf28inlineContent,
 .comp-m764mpa8inlineContent,
-.Containeru1kbj,
 .Containeru1kbjinlineContent,
 .Containeru1kbjinlineContent-gridContainer {
   max-width: 100% !important;
@@ -98,17 +65,52 @@ wow-image {
   box-sizing: border-box !important;
 }
 
-/* Add specific fix for content containment */
-.comp-m764mf28inlineContent-gridContainer,
-.comp-m764mpa8inlineContent-gridContainer {
-  padding: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-}
-
-/* Make headers responsive too */
+/* Make headers responsive */
 .comp-m764q8fa .font_2,
 .comp-m764otf1 .font_2 {
   font-size: clamp(24px, 5vw, 34px) !important;
+  line-height: 1.3 !important;
+  margin-bottom: 20px !important;
+}
+
+/* Responsive adjustments - Mobile */
+@media screen and (max-width: 767px) {
+  /* Stack columns on mobile */
+  .V5AUxf {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+  
+  /* Full width columns on mobile */
+  .comp-m764mf28,
+  .comp-m764mpa8 {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* Fix image dimensions */
+  #img_comp-m764snp8 img,
+  #img_comp-m7bnjhts img {
+    height: auto !important;
+    aspect-ratio: 627/479 !important;
+  }
+}
+
+/* Responsive adjustments - Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .V5AUxf {
+    gap: 20px !important;
+  }
+  
+  .comp-m764mf28,
+  .comp-m764mpa8 {
+    max-width: 47% !important;
+  }
+}
+
+/* Fix for non-flex supporting browsers */
+.V5AUxf:after {
+  content: "";
+  display: table;
+  clear: both;
 }
