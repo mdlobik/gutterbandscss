@@ -1,4 +1,7 @@
 /* Responsive images CSS */
+body {
+  background-color: red !important;
+}
 
 /* Target the image containers */
 .LjV9wd.comp-m764snp8,
